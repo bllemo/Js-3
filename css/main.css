@@ -34,8 +34,8 @@ body {
 }
 
 .card:hover {
-    border: 2px solid #007bff;
-    transform: scale(1.02);
+    border: 2px solid #007bff; /* Толще обводка при наведении */
+    transform: scale(1.02); /* Увеличение карточки при наведении */
 }
 
 .card.completed {
@@ -57,18 +57,18 @@ button {
     height: 35px;
     border-radius: 10px;
     border: none;
-    color: white;
-    background-color: #007bff;
+    color: white; /* Цвет текста кнопки */
+    background-color: #007bff; /* Голубой цвет кнопки */
     font-size: 14px;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 button:hover {
-    background-color: #0056b3;
-    transform: translateY(-2px);
+    background-color: #0056b3; /* Темнее при наведении */
+    transform: translateY(-2px); /* Подъем кнопки при наведении */
 }
 
 button:active {
-    transform: translateY(0);
+    transform: translateY(0); /* Возврат кнопки в исходное положение при нажатии */
 }
