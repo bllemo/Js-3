@@ -2,73 +2,104 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 20px;
-    background-color: #f4f4f4;
+    background-color: #fff;
+    color: #333;
 }
 
 .board {
     display: flex;
     justify-content: space-between;
+    gap: 15px;
 }
 
 .column {
     background: #fff;
     border: 1px solid #ccc;
-    border-radius: 5px;
     width: 23%;
     padding: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: box-shadow 0.3s ease;
 }
 
-.column:hover {
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+.column h2 {
+    margin: 0 0 10px 0;
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+    font-size: 1rem;
+    text-align: center;
+    color: #333;
 }
 
 .card {
-    background: #e9e9e9;
-    border: 1px solid #ccc;
-    border-radius: 10px;
+    background: #fff;
+    border: 1px solid #ddd;
     margin-bottom: 10px;
     padding: 10px;
-    transition: border 0.3s ease, transform 0.3s ease;
 }
 
-.card:hover {
-    border: 2px solid #007bff; /* Толще обводка при наведении */
-    transform: scale(1.02); /* Увеличение карточки при наведении */
+.card h3 {
+    margin: 0 0 6px 0;
+    font-size: 1rem;
+    color: #333;
+}
+
+.card p {
+    margin: 3px 0;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.card p strong {
+    color: #333;
 }
 
 .card.completed {
-    background: #d4edda;
+    background: #f0f9f0;
+    border-color: #c3e6cb;
 }
 
 .card.overdue {
-    background: #f8d7da;
+    background: #fff0f0;
+    border-color: #f5c6cb;
 }
 
-h2 {
-    text-align: center;
-    display: flex;
-    justify-content: center;
+.card input[type="date"] {
+    width: 100%;
+    padding: 5px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 0;
+    font-size: 0.9rem;
+    box-sizing: border-box;
 }
 
-button {
-    width: 150px;
-    height: 35px;
-    border-radius: 10px;
-    border: none;
-    color: white; /* Цвет текста кнопки */
-    background-color: #007bff; /* Голубой цвет кнопки */
-    font-size: 14px;
+.card button {
+    width: 100%;
+    height: 30px;
+    margin: 3px 0;
+    border-radius: 0;
+    border: 1px solid #ccc;
+    background: #fff;
+    color: #333;
+    font-size: 0.85rem;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-button:hover {
-    background-color: #0056b3; /* Темнее при наведении */
-    transform: translateY(-2px); /* Подъем кнопки при наведении */
+.card button:hover {
+    background: #f5f5f5;
 }
 
-button:active {
-    transform: translateY(0); /* Возврат кнопки в исходное положение при нажатии */
+.column > button {
+    width: 100%;
+    height: 32px;
+    margin: 8px 0 10px 0;
+    border-radius: 0;
+    border: 1px solid #007bff;
+    background: #fff;
+    color: #007bff;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+.column > button:hover {
+    background: #007bff;
+    color: #fff;
 }
